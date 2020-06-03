@@ -1,3 +1,15 @@
+1  wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    2  yum makecache
+    3  yum -y update
+    4  yum install -y yum-utils device-mapper-persistent-data lvm2
+    5  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    6  yum list docker-ce --showduplicates | sort -r
+    7  yum install docker-ce-18.06.3.ce -y
+    8  systemctl start docker
+    9  systemctl enable docker
+   10  docker version
+
+
 # 一、预先准备环境
 ## 1. 准备服务器
 这里准备了三台ubuntu虚拟机，每台一核cpu和2G内存，配置好root账户，并安装好了docker，后续的所有操作都是使用root账户。虚拟机具体信息如下表：
