@@ -22,7 +22,7 @@ EOF
    17  cat /etc/sysctl.d/k8s.conf
    18  sysctl -p /etc/sysctl.d/k8s.conf
    19  hostname
-
+hostnamectl set-hostname 主机名 然后重启操作系统
 
 # 一、预先准备环境
 ## 1. 准备服务器
